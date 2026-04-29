@@ -9,9 +9,8 @@ const setMargin = () => {
     }
 };
 
-setMargin();
-
-window.addEventListener('resize', setMargin);
+// setMargin();
+//window.addEventListener('resize', setMargin);
 
 const setList = () => {
     const isDesktop = () => window.innerWidth >= 1024;
