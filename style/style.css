@@ -537,3 +537,45 @@ img {
         margin-top: -8px
     }
 }
+
+.speaker__container {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        font-size: 10px;
+    }
+    & .speaker {
+        min-width: 0;
+        &:nth-of-type(12n+1), &:nth-of-type(12n+9) {
+            background: #F0FE46;
+        }
+        &:nth-of-type(12n+3), &:nth-of-type(12n+7) {
+            background: #F86CFD;
+        }
+        &:nth-of-type(6n+5) {
+            background: #01BDF8;
+        }
+        & img {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        & div {
+            padding: 0 1em 1em 1em;
+        }
+        & h2 {
+            text-transform: uppercase;
+            font-size: 2.5em;
+            @media (max-width: 768px) {
+                font-size: 1.5em;
+            }
+        }
+        & h3 {
+            font-size: 2em;
+            @media (max-width: 768px) {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
